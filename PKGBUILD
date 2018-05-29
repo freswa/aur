@@ -1,4 +1,4 @@
-# Maintainer: Andrew Crerar <andrew@crerar.io>
+# Maintainer: Andrew Crerar <crerar@archlinux.org>
 # Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
 # Contributor: Jan-Erik Rediger <badboy at archlinux dot us>
@@ -9,7 +9,7 @@ pkgver=4.0.9
 pkgrel=1
 pkgdesc='Advanced key-value store'
 arch=('x86_64')
-url='http://redis.io/'
+url='https://redis.io/'
 license=('BSD')
 depends=('jemalloc' 'grep' 'shadow')
 backup=('etc/redis.conf'
