@@ -1,0 +1,22 @@
+pkgbase = datagrip
+	pkgdesc = Smart SQL Editor and Advanced Database Client Packed Together for Optimum Productivity
+	pkgver = 2019.2.3
+	pkgrel = 1
+	url = http://www.jetbrains.com/datagrip/
+	arch = any
+	license = Commercial
+	makedepends = rsync
+	conflicts = 0xdbe
+	conflicts = 0xdbe-eap
+	options = !strip
+	source = https://download.jetbrains.com/datagrip/datagrip-2019.2.3.tar.gz
+	source = jetbrains-datagrip.desktop
+	sha512sums = 5c727f9f2f4ce0bdac884efe3e1b291aa7e3125c42bbad59d0c29217bb8c1dbebbffe6405a84b556de8afac5e6a0879fab4901fc1b8b84c04d1cd298ad104edb
+	sha512sums = 4172c0c7065a91148c7b5b2bec1f84572fc7d302cd63e2f132f66297fd96c3969c403975a1eec93ec5d931406a7631fd9972222752d924338ed2b2cee44ba052
+
+pkgname = datagrip
+	optdepends = datagrip-jre: JetBrains custom Java Runtime (Recommended)
+	optdepends = java-runtime: JRE - Required if datagrip-jre is not installed
+
+pkgname = datagrip-jre
+
