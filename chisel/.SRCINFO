@@ -1,0 +1,15 @@
+pkgbase = chisel
+	pkgdesc = Constructing Hardware in a Scala Embedded Language
+	pkgver = 3.1.8
+	pkgrel = 1
+	url = https://chisel.eecs.berkeley.edu/
+	arch = any
+	license = BSD
+	makedepends = sbt
+	depends = java-environment
+	depends = verilator
+	source = https://github.com/freechipsproject/chisel3/archive/v3.1.8.tar.gz
+	sha512sums = fd58029d84ef47cc28b5e87224b73378d99cd15f1b01760b965d3ae94f926ea067639420c112992c3e537e83776d9a28d364528cc2b2de90b6a3bc83f3a0b1d5
+
+pkgname = chisel
+
