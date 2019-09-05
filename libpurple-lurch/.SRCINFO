@@ -1,0 +1,22 @@
+pkgbase = libpurple-lurch
+	pkgdesc = Plugin for libpurple (Pidgin, Adium, etc) implementing OMEMO (using axolotl)
+	pkgver = 0.6.8
+	pkgrel = 1
+	url = https://github.com/gkdr/lurch
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	depends = libpurple
+	depends = mxml
+	depends = libxml2
+	depends = sqlite
+	depends = libgcrypt
+	optdepends = libpurple-carbons: message carbons support
+	conflicts = libpurple-lurch-git
+	source = git+https://github.com/gkdr/lurch.git#tag=v0.6.8
+	sha512sums = SKIP
+
+pkgname = libpurple-lurch
+
