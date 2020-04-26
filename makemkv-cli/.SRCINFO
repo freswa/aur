@@ -1,0 +1,27 @@
+pkgbase = makemkv-cli
+	pkgdesc = DVD and Blu-ray to MKV converter and network streamer - CLI only
+	pkgver = 1.15.0
+	pkgrel = 1
+	url = http://www.makemkv.com
+	install = makemkv.install
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	license = MPL
+	license = custom
+	depends = ffmpeg
+	depends = java-runtime
+	provides = makemkv
+	conflicts = makemkv
+	source = http://www.makemkv.com/download/makemkv-bin-1.15.0.tar.gz
+	source = http://www.makemkv.com/download/makemkv-oss-1.15.0.tar.gz
+	source = makemkvcon.1
+	source = mmdtsdec.1
+	sha512sums = c6436870554c29c8e646dccaac3a73e23c0a861f0689e10a1ddafe3c6388dd708860c9944b035b9fbbd4e50ee6e67848c25d65fc0808789bdd24fb54a4668994
+	sha512sums = 457c06736ed4ce05eb9a8038fedd28b8741e32b1cd0d77b2fbbec9723419e26e01fb34c9302c0612a3f68c73602f7ba436d93598edd966dda9abec738de1a004
+	sha512sums = cbed2ae086634883e307760948c969a7b18dc212d33b4c04012210a06dce907b33377bef6864b6a8096c6fc12da78d63ac125147d440512b3f16a790b29de4c6
+	sha512sums = 1c1ea3deefebc440f40c7cc710ac2123e20df8d6921846250ca50c39125afa0ef0bf6b3ecbcb71dd29e0b49772d7f77aa5af789bfd22746c92e44d15473637c2
+	optdepends_x86_64 = lib32-glibc: dts support
+
+pkgname = makemkv-cli
+
