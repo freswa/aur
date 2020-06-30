@@ -41,13 +41,13 @@ pkgver(){
 
 package() {
   install -d "${pkgdir}"/{usr/bin,opt}
-  cp -a thunderbird "${pkgdir}"/opt/${pkgname%-bin}-${pkgver}
-  cp vendor.js "${pkgdir}"/opt/${pkgname%-bin}-${pkgver}/defaults/pref/
-  ln -s /opt/${pkgname%-bin}-${pkgver}/thunderbird "${pkgdir}"/usr/bin/${pkgname%-bin}
+  cp -a thunderbird "${pkgdir}"/opt/${pkgname%-bin}
+  cp vendor.js "${pkgdir}"/opt/${pkgname%-bin}/defaults/pref/
+  ln -s /opt/${pkgname%-bin}/thunderbird "${pkgdir}"/usr/bin/${pkgname%-bin}
   for i in 16x16 32x32 48x48 64x64 128x128; do
       install -Dm644 thunderbird/chrome/icons/default/default${i/x*/}.png "${pkgdir}"/usr/share/icons/hicolor/${i}/apps/${pkgname%-bin}.png
   done
   install -Dm644 ${pkgname%-bin}.desktop "${pkgdir}"/usr/share/applications/${pkgname%-bin}.desktop
-  rm -rf "${pkgdir}"/opt/${pkgname%-bin}-${pkgver}/dictionaries/
-  ln -sf /usr/share/hunspell/ "${pkgdir}"/opt/${pkgname%-bin}-${pkgver}/dictionaries
+  rm -rf "${pkgdir}"/opt/${pkgname%-bin}/dictionaries/
+  ln -sf /usr/share/hunspell/ "${pkgdir}"/opt/${pkgname%-bin}/dictionaries
 }
