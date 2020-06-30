@@ -30,8 +30,19 @@ b2sums=('1f954c9a23842367be37c1f56b853de6a336c1b4156df42f88b14f1614d194c2f996f1c
         '674d1ee883e675c37b0af0ac97c339a8c0f2b53cb06e64db64aaa3f22f83d7179b6fa3e122344f3413ccb9956776288db9bc608b5cedef640cbd223838be7476')
 
 prepare() {
-  /usr/bin/curl -z "${FX_SRC}.txt" -gqb "" -fL --retry 3 --retry-delay 3 -o "${FX_SRC}.txt" "${FX_SRC_URI}.txt"
-  /usr/bin/curl -z "${FX_SRC}.tar.bz2" -gqb "" -fL --retry 3 --retry-delay 3 -o "${FX_SRC}.tar.bz2" "${FX_SRC_URI}.tar.bz2"
+  # this only redownloads if the last modified time has changed as new nightly builds are published at the same URL just with a new timestamp and new contents.
+  set +ex
+  if test -e "${FX_SRC}.txt"
+  then zflag="-z ${FX_SRC}.txt"
+  else zflag=
+  fi
+  /usr/bin/curl -gqb "" -fL --retry 3 --retry-delay 3 --remote-time $zflag -o "${FX_SRC}.txt"     "${FX_SRC_URI}.txt"
+
+  if test -e "${FX_SRC}.tar.bz2"
+  then zflag="-z ${FX_SRC}.tar.bz2"
+  else zflag=
+  fi
+  /usr/bin/curl -gqb "" -fL --retry 3 --retry-delay 3 --remote-time $zflag -o "${FX_SRC}.tar.bz2" "${FX_SRC_URI}.tar.bz2"
   tar -xf "${FX_SRC}.tar.bz2"
 }
 
