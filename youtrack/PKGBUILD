@@ -10,7 +10,7 @@ license=('custom:jetbrains')
 depends=('java-runtime-headless')
 backup=('etc/youtrack/youtrack.conf')
 options=('!strip')
-source=("youtrack-${pkgver}.jar::https://download.jetbrains.com/charisma/${pkgname}-${pkgver}.jar"
+source=("youtrack-${pkgver}.jar::https://download-cf.jetbrains.com/charisma/${pkgname}-${pkgver}.jar"
         youtrack.conf
         youtrack.service
         youtrack.sysusers
