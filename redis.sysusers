@@ -1,1 +1,1 @@
-u redis - "Redis in-memory data structure store" /var/lib/redis
+u! redis - "Redis in-memory data structure store" /var/lib/redis
