@@ -1,0 +1,5 @@
+[jetbrains-air]
+source = 'regex'
+url = 'https://data.services.jetbrains.com/products?code=AIR&release.type=preview'
+encoding = 'utf8'
+regex = 'Air-([\d.]+).tar.gz'

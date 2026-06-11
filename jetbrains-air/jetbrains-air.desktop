@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Air
+Icon=jetbrains-air
+Exec="/opt/jetbrains-air/bin/Air" %f
+Comment=An Agentic Development Environment by Jetbrains
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-air
