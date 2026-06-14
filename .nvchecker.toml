@@ -1,0 +1,4 @@
+[slk]
+source = "git"
+git = "https://github.com/gammons/slk.git"
+prefix = "v"
